@@ -14,6 +14,11 @@ struct LocalNotificationView: View {
                 NotificationManager.shared.requestPermission()
             }
             .buttonStyle(.bordered)
+            
+            Button("Schedule notification") {
+                NotificationManager.shared.scheduleNotification()
+            }
+            .buttonStyle(.bordered)
         }
     }
 }

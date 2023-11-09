@@ -24,7 +24,30 @@ class NotificationManager {
     }
     
     func scheduleNotification() {
+        // content
+        let content = UNMutableNotificationContent()
+        content.title = "Notification Title"
+        content.subtitle = "Notification Subtitle"
+        content.sound = .default
+        content.badge = 1
         
+        // time
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // identifier
+        let identifier = UUID().uuidString
+        
+        // request
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        // schedule
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Notification scheduled")
+            }
+        }
     }
     
     func removeNotification() {
