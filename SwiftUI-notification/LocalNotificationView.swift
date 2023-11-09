@@ -19,6 +19,12 @@ struct LocalNotificationView: View {
                 NotificationManager.shared.scheduleNotification()
             }
             .buttonStyle(.bordered)
+            
+            Button("Cancel notification") {
+                NotificationManager.shared.removeNotification()
+            }
+            .buttonStyle(.bordered)
+            
         }
         .onAppear {
             UNUserNotificationCenter.current().setBadgeCount(0)

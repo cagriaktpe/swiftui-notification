@@ -33,26 +33,26 @@ class NotificationManager {
         content.badge = 1
         
         // trigger
-        // time
-        // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        //time
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         // calendar
         // var dateComponents = DateComponents()
         // dateComponents.hour = 10
         // dateComponents.minute = 55
         
-        let coordinates = CLLocationCoordinate2D(latitude: 37.33182,
-                                                longitude: -122.03118)
+        //let coordinates = CLLocationCoordinate2D(latitude: 37.33182,
+                                                //longitude: -122.03118)
         
-        let region = CLCircularRegion(
-            center: coordinates,
-            radius: 100,
-            identifier: UUID().uuidString)
+        //let region = CLCircularRegion(
+            //center: coordinates,
+            //radius: 100,
+            //identifier: UUID().uuidString)
         
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
+        //region.notifyOnEntry = true
+        //region.notifyOnExit = false
         
-        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
+        //let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
         
         // identifier
         let identifier = UUID().uuidString
@@ -71,7 +71,8 @@ class NotificationManager {
     }
     
     func removeNotification() {
-        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
     
 }
