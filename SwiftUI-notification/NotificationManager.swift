@@ -31,8 +31,16 @@ class NotificationManager {
         content.sound = .default
         content.badge = 1
         
+        // trigger
         // time
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // calendar
+        var dateComponents = DateComponents()
+        dateComponents.hour = 10
+        dateComponents.minute = 55
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         // identifier
         let identifier = UUID().uuidString
