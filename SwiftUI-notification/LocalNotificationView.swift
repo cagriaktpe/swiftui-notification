@@ -20,6 +20,9 @@ struct LocalNotificationView: View {
             }
             .buttonStyle(.bordered)
         }
+        .onAppear {
+            UNUserNotificationCenter.current().setBadgeCount(0)
+        }
     }
 }
 
