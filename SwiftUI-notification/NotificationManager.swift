@@ -7,6 +7,7 @@
 
 import Foundation
 import UserNotifications
+import CoreLocation
 
 class NotificationManager {
     
@@ -36,11 +37,22 @@ class NotificationManager {
         // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         // calendar
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 55
+        // var dateComponents = DateComponents()
+        // dateComponents.hour = 10
+        // dateComponents.minute = 55
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let coordinates = CLLocationCoordinate2D(latitude: 37.33182,
+                                                longitude: -122.03118)
+        
+        let region = CLCircularRegion(
+            center: coordinates,
+            radius: 100,
+            identifier: UUID().uuidString)
+        
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+        
+        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
         
         // identifier
         let identifier = UUID().uuidString
