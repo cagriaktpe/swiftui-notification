@@ -11,6 +11,8 @@
 		81432BA12AFCBCA700006BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81432BA02AFCBCA700006BBA /* ContentView.swift */; };
 		81432BA32AFCBCA900006BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81432BA22AFCBCA900006BBA /* Assets.xcassets */; };
 		81432BA72AFCBCA900006BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81432BA62AFCBCA900006BBA /* Preview Assets.xcassets */; };
+		81432BAE2AFCBD7400006BBA /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81432BAD2AFCBD7400006BBA /* LocalNotificationView.swift */; };
+		81432BB02AFCBE2700006BBA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81432BAF2AFCBE2700006BBA /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		81432BA22AFCBCA900006BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81432BA42AFCBCA900006BBA /* SwiftUI_notification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_notification.entitlements; sourceTree = "<group>"; };
 		81432BA62AFCBCA900006BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81432BAD2AFCBD7400006BBA /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
+		81432BAF2AFCBE2700006BBA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				81432BA22AFCBCA900006BBA /* Assets.xcassets */,
 				81432BA42AFCBCA900006BBA /* SwiftUI_notification.entitlements */,
 				81432BA52AFCBCA900006BBA /* Preview Content */,
+				81432BAD2AFCBD7400006BBA /* LocalNotificationView.swift */,
+				81432BAF2AFCBE2700006BBA /* NotificationManager.swift */,
 			);
 			path = "SwiftUI-notification";
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81432BAE2AFCBD7400006BBA /* LocalNotificationView.swift in Sources */,
 				81432BA12AFCBCA700006BBA /* ContentView.swift in Sources */,
 				81432B9F2AFCBCA700006BBA /* SwiftUI_notificationApp.swift in Sources */,
+				81432BB02AFCBE2700006BBA /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
